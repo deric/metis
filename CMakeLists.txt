@@ -17,6 +17,13 @@ else()
   set(METIS_LIBRARY_TYPE STATIC)
 endif(SHARED)
 
+find_package(JNI)
+
+if (JNI_FOUND)
+  message (STATUS "JNI_INCLUDE_DIRS=${JNI_INCLUDE_DIRS}")
+  message (STATUS "JNI_LIBRARIES=${JNI_LIBRARIES}")
+  include_directories(${JNI_INCLUDE_DIRS})
+endif()
 include(${GKLIB_PATH}/GKlibSystem.cmake)
 # Add include directories.
 include_directories(${GKLIB_PATH})

@@ -220,3 +220,4 @@ void GPReportResults(params_t *params, graph_t *graph, idx_t *part, idx_t objval
   printf("******************************************************************************\n");
 
 }
+
